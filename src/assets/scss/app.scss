@@ -64,7 +64,6 @@
 @import "global/wp-admin";
 @import "global/wp-overrides";
 @import "global/gutenberg";
-@import "global/custom-properties";
 
 // Modules
 @import "modules/navigation";
@@ -82,3 +81,5 @@
 // Templates
 @import "templates/front";
 @import "templates/kitchen-sink";
+
+@import "global/custom-properties";

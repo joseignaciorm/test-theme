@@ -1,17 +1,20 @@
+<?php
+/* Get meta data de los investigadores y sus publicaciones */
+	$research_ids = get_post_meta(get_the_ID(), 'research_id');
+	foreach( $research_ids as $research_id ) { 
+		$research_name = get_the_title( $research_id ); 
+		//var_dump($research_name); 
+	}
+?>
 
-
-<article class="card research">
+<article class="card publication">
 	<div class="card-section">
-		<a href="">
-			<p class="title-up"><?php _e('Publicación', 'nar-trans'); ?></p>
-		</a>
-		<a href="">
-			<h1><?php the_title(); ?></h1>
-		</a>
+		<p class="title-up"><a href=""><?php _e('Publicación', 'nar-trans'); ?></a></p>
+		<h1><a href=""><?php the_title(); ?></a></h1>
 		<div class="grid-y m-b card-author">
 			<?php _e('Autor/a', 'nar-trans'); ?>
 			<small class="card-author--name">
-				<em><a href=""><b><?php the_author($research_name); ?> </b></a> <span>Ana Sedeño Valdellós</span></em>
+				<em><a href=""><b><?php echo $research_name ?> </b></a></em>
 			</small>
 		</div>
 		<div class="grid-y m-b card-date">
@@ -24,4 +27,3 @@
 		</div>
 	</div>
 </article>
-

@@ -1,14 +1,17 @@
-<article class="cell news small medium-6 large-4 grid-x">
-	<div class="card">
-		<div class="image">
-			<figure>
-				<?php echo get_the_post_thumbnail(); ?>
-			</figure>
-		</div>
-		<div class="card-section">
-			<p class="tittle-up">Actividades Nar_trans</p>
-			<a href="<?php the_permalink(); ?>"><h1 class="title-section"><?php the_title(); ?></h1></a>
-			<date class="date"><?php the_time(get_option('date_format')); ?></date>
+<!-- Card Noticias -->
+<article class="card">
+	<figure class="">
+		<?php echo get_the_post_thumbnail(); ?>
+	</figure>
+	<div class="card-section">
+		<a href="">
+			<p class="title-up"><?php _e('ACTIVIDADES NAR_TRANS', 'nar-trans'); ?></p>
+		</a>
+		<a href="">
+			<h1 class="title-ativity"><?php the_title(); ?></h1>
+		</a>
+		<div class="public-date M-t-b">
+			<date class=""><?php the_time('d F \,\ Y'); ?></date>
 		</div>
 	</div>
 </article>
