@@ -1,0 +1,51 @@
+
+/* Base Theme */
+body {
+    color: $color-primary;
+}
+p {
+    font-size: 1.2em;
+    margin: 0;
+    line-height: 1.61;
+}
+
+p, small, .date, a {
+    line-height: 1.4;
+}
+
+.card {
+    background-color: transparent;
+    border: 2px solid #182a46;
+    overflow: visible;
+    position: relative;
+
+    img {
+        min-width: 100%;
+        height: auto;
+        object-fit: contain; // Contain = Altura, cover es para anchura
+        border-bottom: 2px solid #182a46;
+    }
+
+    @include breakpoint(large) {
+    }
+}
+
+.card-section {
+    padding: 1.275rem 0.8125rem;
+    position: relative;
+}
+
+$p-t: 2rem;
+$p-b: 2rem;
+.section-p-t-b {
+    padding-top: $p-t;
+    padding-bottom: $p-b;
+}
+
+.m-b {
+    margin-bottom: .5rem;
+}
+
+.m-t {
+    margin-top: 2rem;
+}

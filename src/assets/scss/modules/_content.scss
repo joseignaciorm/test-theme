@@ -1,0 +1,168 @@
+.main-container {
+  //@include xy-grid-container;
+  
+}
+
+.main-grid {
+  @include xy-grid();
+
+  @include breakpoint(medium) {
+  }
+
+  &.sidebar-left {
+    // Place the sidebar below main content on small screens ...
+    @include breakpoint(small) {
+      .main-content { order: 1; }
+      .sidebar { order: 2; }
+    }
+
+    // ... and to the left on medium-up screens, when using the sidebar-left template
+    @include breakpoint(medium) {
+      .main-content { order: 2; }
+      .sidebar { order: 1; }
+    }
+  }
+
+  // Full width template
+  .main-content-full-width {
+    @include xy-cell(12);
+  }
+
+  // Default template
+  .main-content {
+    @include breakpoint(small) {
+      @include xy-cell(12);
+    }
+
+    @include breakpoint(medium) {
+      @include xy-cell(8);
+    }
+  }
+
+  .sidebar {
+    @include breakpoint(small) {
+      @include xy-cell(12);
+    }
+
+    @include breakpoint(medium) {
+      @include xy-cell(4);
+      margin-top: 1rem;
+    }
+
+  }
+}
+
+/* Custom Properties */
+/* Foundation styles */
+.main-grid .main-content {
+  width: 100%;
+  margin-right: 0.625rem;
+  margin-left: 0.625rem; }
+  @media print, screen and (min-width: 40em) {
+    .main-grid .main-content {
+      margin-right: 0;
+      margin-left: 0; } }
+
+.service img {
+  padding: 1rem;
+  width: auto;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+
+/* Cards */
+.card {
+}
+
+.news {
+  background-color: #dae4ee;
+
+  &--title {
+    font-size: 2.3em;
+    margin-top: 1em;
+  }
+
+  .card {
+    .image {
+      text-align: center;
+    }
+
+    .card-section {
+      display: flex;
+      flex-direction: column;
+
+      .tittle-up {
+        font-size: 16px;
+        margin: 0;
+        padding: .1em .7em;
+        background-color:#dae4ee;
+        color: #182a46;
+
+        position: absolute;
+        top: -14px;
+        left: 20px;
+      }
+
+      .title-section {font-size: 1.5em;}
+
+      .date {
+        margin-top: auto;
+      }
+    }
+
+      
+  }
+}
+
+
+.research-sec {
+  .card {
+    
+    border-radius: 50;
+    background: transparent;
+    box-shadow: none;
+    overflow: visible;
+    color: $color-primary; 
+    .card:first-child {
+      border: 3px solid green;
+      background-color: green;
+    }
+
+    
+      .title-up {
+        display: inline-table;
+        font-size: 0.75em;
+        padding: .2em 1em;
+        background-color: $color-bg-primary;
+        margin-top: -2.5rem;
+        //margin-left: .5rem;
+      }
+    
+    
+    
+}
+}
+
+// Top Ancestor
+.site-nav nav ul li.current-menu-item a:link,
+.site-nav nav ul li.current-menu-item a:visited,
+.site-nav nav ul li.current-page-ancestor a:link,
+.site-nav nav ul li.current-page-ancestor a:visited {
+    font-weight: bold;
+    background-color: #006ec3;
+    color: #fff;
+
+}
+
+.children-links .parent-link a:link,
+.children-links .parent-link a:visited {
+  color: green;
+}
+
+.children-links .current_page_item a:link,
+.children-links .current_page_item a:visited {
+  border: 1px solid #ddd;
+  color: green;
+  cursor: pointer;
+}
