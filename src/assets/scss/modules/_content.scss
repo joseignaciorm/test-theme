@@ -1,27 +1,9 @@
 .main-container {
-  //@include xy-grid-container;
-  
-}
+  @include xy-grid-container;
 
-.main-grid {
-  @include xy-grid();
+  @include breakpoint(xxlarge) {
 
-  @include breakpoint(medium) {
-  }
-
-  &.sidebar-left {
-    // Place the sidebar below main content on small screens ...
-    @include breakpoint(small) {
-      .main-content { order: 1; }
-      .sidebar { order: 2; }
-    }
-
-    // ... and to the left on medium-up screens, when using the sidebar-left template
-    @include breakpoint(medium) {
-      .main-content { order: 2; }
-      .sidebar { order: 1; }
-    }
-  }
+        }
 
   // Full width template
   .main-content-full-width {
@@ -52,98 +34,236 @@
   }
 }
 
-/* Custom Properties */
-/* Foundation styles */
-.main-grid .main-content {
-  width: 100%;
-  margin-right: 0.625rem;
-  margin-left: 0.625rem; }
-  @media print, screen and (min-width: 40em) {
-    .main-grid .main-content {
-      margin-right: 0;
-      margin-left: 0; } }
+/* *** Estilos para el Home Page Template *** */
 
-.service img {
-  padding: 1rem;
-  width: auto;
-  max-height: 200px;
-  object-fit: contain;
+// Primera section del home container
+.blk-full-with {
+  background-color: #f2907b;
+  border: 1px solid #979797;
 }
+.blk-1 {
+
+  .blk-1-image {
+    /*min-height: 600px;
+    background-image: url('../images/Narrativas-Transmediales-image.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;*/
+  }
 
 
-/* Cards */
-.card {
-}
+    &--items .btn-nar a.button {
+      color: $color-header-bg;
+      font-weight: bold;
+      transition: all .3s ease;
+      border: 2px solid $color-main;
 
-.news {
-  background-color: #dae4ee;
+      &:hover {
+        background: $color-hover-button;
+        color: $color-main;
+        border: 2px solid $color-hover-button;
+      }
+    }
+
+    &--items .btn-lab .button.hollow {
+      border: 2px solid $color-main;
+      color: $color-main;
+      font-weight: bold;
+      transition: all .3s ease;
+
+      &:hover {
+        background: $color-hover-button;
+        color: $color-main;
+        border: 2px solid $color-hover-button;
+      }
+    }
+
+
+
+} // Fín Primera section del home container
+
+// Segunda section del home container EVENT
+.event-content {
+    color: $color-main;
+    padding-bottom: 2rem;
+
+    .l-event-card-content {
+      /*
+        *** Margin top al contenedor izquierdo para alinearlo  con el aside que tyiene margin top para poder mostrar el titilu. Pendiente mejorarlo ***
+      */
+      //margin-top: 1em;
+      .card {
+
+        .card-section {
+          position: relative;
+
+          .title-up {
+            background-color: $color-bg-txt-alt;
+          }
+        } // Fín Card Section
+      } // Fín Card
+    }
+
+    .aside--cards {
+      .card {
+
+        .card-section {
+
+          position: relative;
+
+          .title-up {
+            background-color: #ffffff;
+          }
+        }
+      } // Fín card
+
+        .card-event-btn{
+            margin-top: 2rem;
+          .card-event-btn .button.expanded {
+            color: $color-header-bg;
+
+            &:hover {
+              background: $color-hover-button;
+              color: $color-main;
+              border: 0px solid $color-hover-button;
+            }
+          }
+        }
+      } // Fín Aside
+  } // Fín Segunda section del home container EVENT
+
+// Tercera section del home container NOTICIAS
+.news-full-with {
+  background-color: $color-section-bg-first;
+  margin-top: 2em;
+
+  .news-content {
+    .news {
+      padding-top: 1em;
+      margin-bottom: .5em;
+      font-size: 2.3rem;
+    }
+
+  &--cards {
+
+    .card {
+      .image {
+        height: 200px;
+      }
+
+      .card-section {
+        position: relative;
+        .title-up {
+          background-color: $color-bg-txt-alt;
+        }
+      }
+    }
+  }
+    .button.expanded {
+      background-color: #FFFFFF;
+      opacity: .85;
+      color: $color-main;
+      font-weight: bold;
+      border: 0px;
+
+      &:hover {
+          background: $color-main;
+          color: #FFFFFF;
+          border: 0px solid #FFFFFF;
+        }
+    }
+  }// Fín Tercera section del home container
+} // Fín Tercera section del home container NOTICIAS
+
+// Cuarta section del home container INVESTIGACIÓN
+.research-sec {
 
   &--title {
-    font-size: 2.3em;
-    margin-top: 1em;
+    font-size: 2.5em;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .card {
-    .image {
-      text-align: center;
-    }
+    border: 3px solid $color-border-alt;
 
-    .card-section {
-      display: flex;
-      flex-direction: column;
-
-      .tittle-up {
-        font-size: 16px;
-        margin: 0;
-        padding: .1em .7em;
-        background-color:#dae4ee;
-        color: #182a46;
-
-        position: absolute;
-        top: -14px;
-        left: 20px;
-      }
-
-      .title-section {font-size: 1.5em;}
-
-      .date {
-        margin-top: auto;
-      }
-    }
-
-      
-  }
-}
-
-
-.research-sec {
-  .card {
-    
-    border-radius: 50;
-    background: transparent;
-    box-shadow: none;
-    overflow: visible;
-    color: $color-primary; 
     .card:first-child {
-      border: 3px solid green;
-      background-color: green;
+      border: 3px solid $color-border-enfasis;
+      background-color: $color-border-enfasis;
+
+      .title-up {
+        background-color: $color-border-enfasis;
+      }
+    }
+      .title-up {
+        background-color: #ffffff;
+      }
+  }
+
+  @include breakpoint(large) {
+    .button.expanded {
+        width: calc( 100% - 1.525rem );
+        margin-left: 1.4rem;
+        border: 0;
+
+        &:hover {
+            background: $color-hover-button;
+            color: $color-main;
+            border: 0px solid $color-hover-button;
+          }
+    }
+  }
+} // FÍN Cuarta section del home container INVESTIGACIÓN
+
+// Quinta section del home container CATÁLOGO
+.resource-full-with {
+    background-color: $color-header-bg;
+    margin-top: 2em;
+  .resource-content {
+    &--title {
+      padding-top: 1em;
+      margin-bottom: .5em;
+      font-size: 2.3rem;
     }
 
-    
-      .title-up {
-        display: inline-table;
-        font-size: 0.75em;
-        padding: .2em 1em;
-        background-color: $color-bg-primary;
-        margin-top: -2.5rem;
-        //margin-left: .5rem;
-      }
-    
-    
-    
-}
-}
+  &--cards {
 
+    .card {
+
+      .card-section {
+        position: relative;
+
+        .title-up {
+          background-color: $color-bg-txt-alt;
+        }
+
+        .title {
+          font-size: rem-calc(20);
+        }
+      }
+    }
+  }
+    .button.expanded {
+      background-color: $color-main;
+      color: #FFFFFF;
+      font-weight: bold;
+      border: 0;
+
+      &:hover {
+          background: $color-hover-button;
+          color: $color-main;
+        }
+
+    }
+  }// Fín Tercera section del home container
+} // Fín Quinta section del home container CATÁLOGO
+
+
+
+
+/* *** Fín Estilos para el */
+/*
 // Top Ancestor
 .site-nav nav ul li.current-menu-item a:link,
 .site-nav nav ul li.current-menu-item a:visited,
@@ -166,3 +286,4 @@
   color: green;
   cursor: pointer;
 }
+*/
