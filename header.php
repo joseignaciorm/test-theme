@@ -24,7 +24,7 @@
 
 	<header class="site-header grid-container full" data-sticky-container  role="banner">
 		<!-- Menu Mobile -->
-		<div class="site-title-bar title-bar" <?php foundationpress_title_bar_responsive_toggle();?> >
+		<div class="site-title-bar title-bar grid-container" <?php foundationpress_title_bar_responsive_toggle();?> >
 			<div class="title-bar-left">
 				<button aria-label="<?php _e( 'Main Menu', 'foundationpress' ); ?>" class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
 				<span class="site-mobile-title title-bar-title">
@@ -35,7 +35,7 @@
 
 		<!-- Menu escritorio -->
 		<!-- data-sticky Quitado provisionalmente para poder maquetar mas cómodo en esta pantalla -->
-		<nav class="site-navigation top-bar sticky"   data-margin-top="0" role="navigation" id="<?php 	foundationpress_mobile_menu_id(); ?>" data-hide-for="large">
+		<nav class="site-navigation top-bar sticky grid-container"   data-margin-top="0" role="navigation" id="<?php 	foundationpress_mobile_menu_id(); ?>" data-hide-for="large">
 			<div class="top-bar-left">
 				<div class="site-desktop-title top-bar-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>

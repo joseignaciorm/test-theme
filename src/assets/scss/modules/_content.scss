@@ -36,45 +36,41 @@
 
 /* *** Estilos para el Home Page Template *** */
 
+
+/* *** Estilos para el Home Page Template *** */
+
 // Primera section del home container
 .blk-full-with {
-  background-color: #f2907b;
-  border: 1px solid #979797;
+  background-color: $color-background-alternate;
+  border: 1px solid $color-border-alternate;
 }
 .blk-1 {
 
-  .blk-1-image {
-    /*min-height: 600px;
-    background-image: url('../images/Narrativas-Transmediales-image.svg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;*/
-  }
 
-
-    &--items .btn-nar a.button {
+    .btn-nar a.button {
       color: $color-header-bg;
       font-weight: bold;
+      color: $color-header-bg;
       transition: all .3s ease;
       border: 2px solid $color-main;
 
       &:hover {
-        background: $color-hover-button;
+        background: $color-background-alternate;
         color: $color-main;
-        border: 2px solid $color-hover-button;
+        border: 2px solid $color-main;
       }
     }
 
-    &--items .btn-lab .button.hollow {
+    .btn-lab .button.hollow {
       border: 2px solid $color-main;
       color: $color-main;
       font-weight: bold;
       transition: all .3s ease;
 
       &:hover {
-        background: $color-hover-button;
-        color: $color-main;
-        border: 2px solid $color-hover-button;
+        background: $color-main;
+        color: $color-header-bg;
+        border: 2px solid $color-main;
       }
     }
 
@@ -117,19 +113,19 @@
         }
       } // Fín card
 
-        .card-event-btn{
+        .card-event-btn {
             margin-top: 2rem;
-          .card-event-btn .button.expanded {
+
+          .button.expanded {
             color: $color-header-bg;
 
             &:hover {
-              background: $color-hover-button;
+              background-color: $color-hover-button;
               color: $color-main;
-              border: 0px solid $color-hover-button;
             }
           }
         }
-      } // Fín Aside
+    } // Fín Aside
   } // Fín Segunda section del home container EVENT
 
 // Tercera section del home container NOTICIAS
@@ -138,7 +134,7 @@
   margin-top: 2em;
 
   .news-content {
-    .news {
+    .news--title {
       padding-top: 1em;
       margin-bottom: .5em;
       font-size: 2.3rem;
@@ -161,14 +157,15 @@
   }
     .button.expanded {
       background-color: #FFFFFF;
-      opacity: .85;
       color: $color-main;
       font-weight: bold;
       border: 0px;
+      width: calc( 100% - .9rem );
+      margin-left: .4rem;
 
       &:hover {
           background: $color-main;
-          color: #FFFFFF;
+          color: $color-header-bg;
           border: 0px solid #FFFFFF;
         }
     }
@@ -201,19 +198,26 @@
       }
   }
 
-  @include breakpoint(large) {
-    .button.expanded {
-        width: calc( 100% - 1.525rem );
-        margin-left: 1.4rem;
-        border: 0;
-
-        &:hover {
-            background: $color-hover-button;
-            color: $color-main;
-            border: 0px solid $color-hover-button;
-          }
-    }
+  .button.expanded {
+    color: #182a46;
+    opacity: .85;
+    background-color: $color-section-bg-first;
   }
+    @include breakpoint(large) {
+      .button.expanded {
+          width: calc( 100% - 1.525rem );
+          margin-left: 1.4rem;
+          border: 0;
+
+          &:hover {
+              background: $color-hover-button;
+              color: $color-main;
+              border: 0px solid $color-hover-button;
+          }
+      }
+    }
+
+
 } // FÍN Cuarta section del home container INVESTIGACIÓN
 
 // Quinta section del home container CATÁLOGO
@@ -246,9 +250,11 @@
   }
     .button.expanded {
       background-color: $color-main;
-      color: #FFFFFF;
+      color: $color-header-bg;;
       font-weight: bold;
       border: 0;
+      width: calc( 100% - .9rem );
+      margin-left: .465rem;
 
       &:hover {
           background: $color-hover-button;
@@ -258,6 +264,12 @@
     }
   }// Fín Tercera section del home container
 } // Fín Quinta section del home container CATÁLOGO
+
+
+
+
+/* *** Fín Estilos para el Home Page Template *** */
+
 
 
 

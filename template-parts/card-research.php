@@ -1,21 +1,15 @@
-
-
 <article class="card research">
 	<div class="card-section">
-		<a href="">
-			<p class="title-up"><?php _e('Publicación', 'nar-trans'); ?></p>
-		</a>
-		<a href="">
-			<h1><?php the_title(); ?></h1>
-		</a>
+		<p class="title-up"><a href="#"><?php _e('Publicación', 'nar-trans'); ?></a></p>
+		<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 		<div class="grid-y m-b card-author">
-			<?php _e('Autor/a', 'nar-trans'); ?>
+			<p><?php _e('Autor/a', 'nar-trans'); ?></p>
 			<small class="card-author--name">
-				<em><a href=""><b><?php the_author($research_name); ?> </b></a> <span>Ana Sedeño Valdellós</span></em>
+				<em><a href=""><b><?php the_author(); ?> </b></a> <span>Ana Sedeño Valdellós</span></em>
 			</small>
 		</div>
 		<div class="grid-y m-b card-date">
-			<small class="card-date--title"><b>Año</b></small>
+			<small class="card-date--title"><b><?php _e('Año', 'nar-trans'); ?></b></small>
 			<date class="card-date--year"><?php the_time('Y'); ?></date>
 		</div>
 		<div class="grid-y m-b card-address">
@@ -24,4 +18,3 @@
 		</div>
 	</div>
 </article>
-
