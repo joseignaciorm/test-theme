@@ -1,0 +1,54 @@
+/* *** Estilos personalizados para las entradas *** */
+
+
+/* *** Single Researcher *** */
+
+/* Aside card de single researcher */
+
+.single-post {
+    padding-bottom: 6rem;
+  
+    .content p {
+      padding: 0 0 1.8125rem 0;
+    }
+  }
+  
+  .title-attachment {
+      display: inline-table;
+      font-size: rem-calc(16);
+      font-weight: 600;
+    }
+  
+    /*
+      ==========================================
+       Single - archive styles
+      ==========================================
+  */
+  
+  .single-cpt {
+    background-color: $color-main;
+  }
+  
+  .single-cpt-hero {
+    height: rem-calc(250);
+    @include breakpoint(medium) {
+      height: rem-calc(500);
+    }
+    &--content {
+        max-width: 100vw;
+        display: inline-block;
+    }
+
+  }
+  .featured-hero {
+    height: rem-calc(250);
+    @include breakpoint(medium) {
+      height: rem-calc(400);
+      background-position: center;
+      background-size: contain;
+    }
+  
+  }
+  
+  
+  
