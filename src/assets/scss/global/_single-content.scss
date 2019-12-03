@@ -19,36 +19,31 @@
       font-weight: 600;
     }
   
-    /*
-      ==========================================
-       Single - archive styles
-      ==========================================
-  */
-  
-  .single-cpt {
-    background-color: $color-main;
-  }
-  
-  .single-cpt-hero {
-    height: rem-calc(250);
-    @include breakpoint(medium) {
-      height: rem-calc(500);
-    }
-    &--content {
-        max-width: 100vw;
-        display: inline-block;
-    }
+  /*
+	==========================================
+	 Single - post styles
+	==========================================
+*/
 
+.single-cpt {
+  background-color: $color-main;
+}
+
+.featured-hero {
+  height: rem-calc(250);
+  width: 100%;
+  @include breakpoint(medium) {
+    height: rem-calc(500);
+    background-position: left top;
   }
-  .featured-hero {
-    height: rem-calc(250);
-    @include breakpoint(medium) {
-      height: rem-calc(400);
-      background-position: center;
-      background-size: contain;
-    }
-  
-  }
-  
-  
-  
+}
+
+.featured-hero.event-hero {
+  min-width: 100vw;
+}
+
+/*
+	==========================================
+	 Archive - Archive styles
+	==========================================
+*/

@@ -20,16 +20,21 @@ get_header(); ?>
 
 			<div class="btn-items M-t grid-x grid-padding-x">
 				<div class="btn-nar cell small-12 medium-6">
-					<a class="button expanded" href="#">
+					<a class="button expanded" href="<?php echo get_the_permalink(200); ?>">
 						<?php _e('El Proyecto Nar_Trans', 'nar-trans'); ?>
 					</a>
 				</div>
 				<?php //Esto irá al archivo del término 'laboratorio', que es un tipo de recurso.
 				?>
 				<div class="btn-lab cell small-12 medium-6">
-					<a class="hollow button expanded" href="<?php //echo get_term_link('laboratorio', 'resource_type'); ?>">
-						<?php _e('Ir al laboratorio', 'nar-trans'); ?>
-					</a>
+				<?php $lab_link = get_term_link('laboratorio', 'resource_type');
+					if (!is_wp_error($lab_link)) : ?>
+
+						<a class="hollow button expanded" href="<?php echo $lab_link; ?>">
+							<?php _e('Ir al laboratorio', 'nar-trans'); ?>
+						</a>
+					<?php endif; ?>
+
 				</div>
 			</div>
 		</div>

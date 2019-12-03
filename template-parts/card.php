@@ -7,14 +7,14 @@
 			$post_id = get_the_ID();
 			$terms = wp_get_post_terms($post_id, 'category');
 
-				if (!is_wp_error($terms) && count($terms)) {
+				if (!is_wp_error($terms) && count($terms) && !is_post_type_archive()) {
 		?>
 
 				<p class="title-up">
 
 					<?php foreach ($terms as $term) { ?>
 
-						<a href="<?php echo get_term_link($term); ?>>"><?php echo $term->name; ?></a>
+						<a href="<?php echo get_term_link($term); ?>"><?php echo $term->name; ?></a>
 
 					<?php } ?>
 

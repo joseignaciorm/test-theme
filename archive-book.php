@@ -1,6 +1,4 @@
-<?php
-
-get_header(); ?>
+<?php get_header(); ?>
 
 <div class="grid-container section-p-t-b">
     <?php while ( have_posts() ) : the_post(); ?>

@@ -29,7 +29,7 @@ get_header(); ?>
 
 		<?php
 		if ( function_exists( 'foundationpress_pagination' ) ) :
-			foundationpress_pagination();
+				foundationpress_pagination();
 		elseif ( is_paged() ) :
 		?>
 			<nav id="post-nav">
