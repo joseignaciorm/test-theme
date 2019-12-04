@@ -1,9 +1,8 @@
 <?php get_header(); ?>
 <section class="grid-container full">
-	<div class="grid-container grid-x grid-padding-x section-p-t-b">
+	<div class="grid-container grid-x">
 
 		<?php 
-		
 			if( have_posts() ) : 
 				while( have_posts()) : the_post(); ?>
 
@@ -22,14 +21,7 @@
 						<?php endif; ?>
 
 						<?php the_content(); ?>
-
 							<br>
-
-						<div class="grid-x section-p-t-b">
-							<div class="small-6 text-left"><?php previous_post_link(); ?></div>
-							<div class="small-6 text-right"><?php next_post_link(); ?></div>
-						</div>
-
 						<div class="comments">
 						 <?php //if( comments_open() ) { comments_template(); } ?>
 						</div>
@@ -37,14 +29,12 @@
 					</article>
 
 					<aside class="cell small-12 large-4">
-						<div class="search-form-container">
-							<?php get_search_form(); ?>
-						</div>
+						<h1>Aside Blog</h1>
 					</aside>
 
 				<?php endwhile; ?>
 			<?php endif; ?>
-			
+	
 	</div>
 </section>
 <?php get_footer(); ?>
